@@ -1,20 +1,21 @@
-import {useState} from 'react';
-import Admin from "./components/Admin";
-import Guest from "./components/Guest";
-
-function App() {
-  const isLoggedIn = false;
-
-  const [count, setCount] = useState(0);
-  function handleClick() {
-      setCount(count + 1);
-  }
+export default function Square() {
   return (
     <>
-      <h1>Hello, Welcome to Audace</h1>
-      {isLoggedIn ? <Admin /> : <><Guest count={count} onClick={handleClick}/><Guest count={count} onClick={handleClick}/></>}
+    <div className="board-row">
+      <button className="square">x</button>
+      <button className="square">x</button>
+      <button className="square">x</button>
+    </div>
+      <div className="board-row">
+        <button className="square">x</button>
+        <button className="square">x</button>
+        <button className="square">x</button>
+      </div>
+      <div className="board-row">
+        <button className="square">x</button>
+        <button className="square">x</button>
+        <button className="square">x</button>
+      </div>
     </>
   );
 }
-
-export default App;
